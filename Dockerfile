@@ -37,7 +37,7 @@ COPY --from=deps /opt/venv /opt/venv
 WORKDIR /app
 # Owned by root and read-only to the runtime user: the app never writes here.
 # The bundled activities.json is only a seed; the live copy lives in /data.
-COPY bot.py suggest.py feed_state.py paths.py runtime.py healthcheck.py activities.json /app/
+COPY bot.py suggest.py feed_state.py paths.py runtime.py webhook.py healthcheck.py activities.json /app/
 # Bytecode is compiled at build time; the root filesystem is read-only at run time.
 RUN python -m compileall -q /app
 
