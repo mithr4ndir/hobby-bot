@@ -8,7 +8,7 @@ requires-python = ">=3.12"
 # holds a bot token. discord.py is the gateway client, dotenv is local-dev only.
 dependencies = [
     "discord.py==2.5.2",
-    "python-dotenv==1.1.0",
+    "python-dotenv==1.2.4",
 ]
 
 [dependency-groups]
