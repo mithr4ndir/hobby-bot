@@ -155,8 +155,10 @@ class Core:
 
 class HobbyBot(discord.Client):
     def __init__(self, core: Core) -> None:
-        # No privileged intents needed: slash commands and sending embeds only.
-        super().__init__(intents=discord.Intents.none())
+        # Only the (non-privileged) guilds intent: it fills the channel cache so
+        # get_channel() can resolve the channel chosen with /feed on. No message
+        # content, no members, no presences.
+        super().__init__(intents=discord.Intents(guilds=True))
         self.tree = app_commands.CommandTree(self)
         self.core = core
 

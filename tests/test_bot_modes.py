@@ -140,3 +140,16 @@ def test_register_commands_builds_full_tree(data_dir: Path) -> None:
     assert groups["feed"] == ["now", "off", "on", "status"]
     assert groups["activity"] == ["add", "list", "reload", "remove", "stale", "verify"]
     asyncio.run(client.close())
+
+
+def test_gateway_client_requests_only_guilds_intent(data_dir: Path) -> None:
+    """get_channel() needs the guild cache, which only the guilds intent fills.
+    Without it the weekly feed silently fell back to the webhook even after
+    /feed on. Nothing privileged may be requested."""
+    client = bot.HobbyBot(bot.Core(None))
+    intents = client.intents
+    assert intents.guilds is True
+    assert intents.message_content is False
+    assert intents.members is False
+    assert intents.presences is False
+    asyncio.run(client.close())
