@@ -1,0 +1,12 @@
+.env
+.env.*
+.venv/
+feed_state.json
+.feed_state_*.tmp
+.activities_*.tmp
+*.seed.tmp
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+!.env.example

@@ -1,0 +1,278 @@
+{
+  "plan": {
+    "title": "Social Hobby System (SF / Bay Area)",
+    "model": [
+      "Three slots per week, never more.",
+      "Anchor A: tabletop, same day every week. Attend 4 weeks before judging.",
+      "Anchor B: movement plus people (dance or bike). Low intensity, leave early if the back complains.",
+      "Rotating slot every 2 weeks: try one new group, then promote, keep, or drop it."
+    ],
+    "rules": [
+      "Show up 4 times before deciding.",
+      "Learn 2 names per visit and write them down. Use them next time.",
+      "By visit 3, ask one person where else they play.",
+      "Join the group's Discord the first night.",
+      "Teach-to-play beats open play while you are new."
+    ],
+    "anchors": [
+      {
+        "slot": "Anchor A (tabletop)",
+        "name": "Dogpatch Games Learn & Play",
+        "when": "Saturdays 10am, repeat Thursday 6:30pm",
+        "where": "1095 Tennessee St, SF",
+        "url": "https://www.dogpatch.games"
+      },
+      {
+        "slot": "Anchor B (movement)",
+        "name": "Lindy in the Park",
+        "when": "Sundays, free beginner lesson at noon, dancing to 2pm (rain cancels)",
+        "where": "JFK Drive behind the de Young, Golden Gate Park",
+        "url": "https://sf.funcheap.com"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "name": "Dogpatch Games Learn & Play",
+      "category": "board_games",
+      "when": "Saturdays 10am, same game repeats Thursday 6:30pm",
+      "where": "1095 Tennessee St, SF",
+      "cost": "Free, sign up on their site, limited seats",
+      "notes": "Best entry point for a tabletop newbie. A teacher runs the table.",
+      "url": "https://www.dogpatch.games",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "SF Game Meetup Group board game night",
+      "category": "board_games",
+      "when": "2nd Monday 6:30pm at Barebottle, 4th Monday 7pm at Caffe Greco",
+      "where": "1525 Cortland Ave or 423 Columbus Ave, SF",
+      "cost": "Buy a drink to support the venue",
+      "notes": "Built for total newbies, starts with an icebreaker game.",
+      "url": "https://www.meetup.com/san-francisco-game-meetup-group",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Gather & Game at The Plough and the Stars",
+      "category": "board_games",
+      "when": "Recurring, check listing for the current day",
+      "where": "116 Clement St, SF",
+      "cost": "Free",
+      "notes": "Large game library, guidance for newcomers, low pressure.",
+      "url": "https://sf.funcheap.com/richmond-board-game-night-sf/",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "The Game Parlour (board game cafe)",
+      "category": "board_games",
+      "when": "Daily 11am to 10pm, later Friday and Saturday",
+      "where": "1342 Irving St, SF (also Oakland)",
+      "cost": "$7 stay and play",
+      "notes": "Not a scheduled group. Invite someone you met elsewhere.",
+      "url": "https://thegameparlour.squarespace.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "SF Board Gaymers",
+      "category": "board_games",
+      "when": "Varies, check Meetup",
+      "where": "Dogpatch area, SF",
+      "cost": "Varies",
+      "notes": "Highly rated and very welcoming to newcomers.",
+      "url": "https://www.meetup.com/find/us--ca--san-francisco/board-games",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Victory Point Cafe",
+      "category": "board_games",
+      "when": "Daily, reserve ahead",
+      "where": "1797 Shattuck Ave, Berkeley",
+      "cost": "About $8 library fee",
+      "notes": "East Bay option with a huge library.",
+      "url": "https://visitberkeley.com/directory/victory-point-cafe-cafes",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "SF Blood on the Clocktower",
+      "category": "social_deduction",
+      "when": "Sundays, mostly 11am",
+      "where": "UCSF Genentech Hall side entrance, Mission Bay",
+      "cost": "Free, RSVP on Discord",
+      "notes": "30 to 40 people per session, no rules knowledge needed, newcomers get their own circle.",
+      "url": "https://www.meetup.com/san-francisco-blood-on-the-clocktower",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Dogpatch Games Adult D&D 101",
+      "category": "ttrpg",
+      "when": "Check their TTRPG events page",
+      "where": "1095 Tennessee St, SF",
+      "cost": "Free, limited seats",
+      "notes": "A dedicated teacher walks first-timers through the rules.",
+      "url": "https://www.dogpatch.games",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Gamescape SF Adventurers League D&D",
+      "category": "ttrpg",
+      "when": "4th Sunday RPG night plus drop-in AL tables",
+      "where": "333 Divisadero St, SF",
+      "cost": "Register on their web store",
+      "notes": "Drop-in friendly, missing a week does not break the group. Masks and vaccination proof required.",
+      "url": "https://www.gamescapesf.store/events",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Bay Area Adventurers League",
+      "category": "ttrpg",
+      "when": "Every two weeks",
+      "where": "Rotating stores around the Bay",
+      "cost": "Varies",
+      "notes": "No experience necessary, same storyline if you keep coming.",
+      "url": "https://www.meetup.com/find/us--ca--san-francisco/dungeons-and-dragons",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Versus Games Friday Night Magic",
+      "category": "card_games",
+      "when": "Fridays",
+      "where": "1716 Taraval St, SF",
+      "cost": "Varies by format",
+      "notes": "Reviews say beginners feel welcome. Start with one Commander precon deck.",
+      "url": "https://locator.wizards.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Golden Gate Games Commander night",
+      "category": "card_games",
+      "when": "Sundays about 6pm",
+      "where": "SF",
+      "cost": "Varies",
+      "notes": "Newer, chill Commander space.",
+      "url": "https://locator.wizards.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Game Post Pokemon and FNM",
+      "category": "card_games",
+      "when": "Wednesday 6pm Pokemon, Friday FNM",
+      "where": "689 3rd St, SF",
+      "cost": "Varies",
+      "notes": "Calendar may be stale, call first.",
+      "url": "https://locator.wizards.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Lindy in the Park",
+      "category": "dance",
+      "when": "Sundays, lesson noon, dancing to 2pm",
+      "where": "JFK Drive behind the de Young, Golden Gate Park",
+      "cost": "Free",
+      "notes": "No partner needed, partners rotate. Beginner swing is small steps, easy on the back. Rain cancels.",
+      "url": "https://sf.funcheap.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Cat's Corner swing night",
+      "category": "dance",
+      "when": "Wednesdays, beginner lesson 9pm, live band to 11:30",
+      "where": "North Beach, SF (verify venue for the date)",
+      "cost": "$15, $10 before 8:30pm",
+      "notes": "Absolute beginner lesson, no registration. Indoor backup when Lindy in the Park rains out.",
+      "url": "https://offbeatsf.com",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "SalsaCrazy Mondays",
+      "category": "dance",
+      "when": "Mondays, beginner lesson then social dancing",
+      "where": "SF",
+      "cost": "$10 to $20",
+      "notes": "Partners rotate so solo dancers get practice.",
+      "url": "https://sf.funcheap.com/salsacrazy-mondays-beginner-lessons-social-dancing-sf/",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Bachata Lab",
+      "category": "dance",
+      "when": "Fridays",
+      "where": "Smuin Center, Potrero Hill",
+      "cost": "$20 ahead, $25 at the door",
+      "notes": "Beginner class plus a practice social.",
+      "url": "https://www.salsavida.com/event/sf-bay-area/san-francisco/bachata-lab/",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "SF Bike Kitchen Social Rides",
+      "category": "biking",
+      "when": "Check Meetup",
+      "where": "Varies, SF",
+      "cost": "Free",
+      "notes": "Casual urban rides, all abilities, stops at points of interest. Keep rides under 90 minutes at first.",
+      "url": "https://www.meetup.com/find/us--ca--san-francisco/cycling",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Scenic Routes slow ride",
+      "category": "biking",
+      "when": "1st Sunday family ride and others",
+      "where": "SF",
+      "cost": "Free",
+      "notes": "Slow, conversational, no-drop.",
+      "url": "https://scenic-routes-site.pages.dev/rides",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Different Spokes intro Sunday ride",
+      "category": "biking",
+      "when": "Sundays",
+      "where": "SF",
+      "cost": "Free",
+      "notes": "Intro ride recommended for newcomers. Upright bike position is kinder to the back.",
+      "url": "https://bayareabicyclelaw.com/need-a-change-of-pace-try-these-group-rides-across-the-bay-area/",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Noisebridge Wednesday newcomer meeting",
+      "category": "community",
+      "when": "Wednesdays 7pm",
+      "where": "272 Capp St, SF",
+      "cost": "Free, no membership needed",
+      "notes": "Hackerspace on-ramp. Also runs a free weekly Python class.",
+      "url": "https://www.noisebridge.net/wiki/Noisebridge",
+      "verified": "2026-11-09",
+      "expires": null
+    },
+    {
+      "name": "Golden Gate Gamemakers playtest night",
+      "category": "community",
+      "when": "Last Thursday 6 to 10pm",
+      "where": "Dogpatch Games, 1095 Tennessee St",
+      "cost": "$12 flat",
+      "notes": "Playtest other people's board game prototypes and meet designers.",
+      "url": "https://sf.funcheap.com/?p=166040",
+      "verified": "2026-11-09",
+      "expires": null
+    }
+  ]
+}
