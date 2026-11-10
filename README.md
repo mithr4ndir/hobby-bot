@@ -35,9 +35,17 @@ Discord bot that posts SF and Bay Area social hobby picks from a small catalog. 
 | `DISCORD_GUILD_ID` | Optional server ID. Slash commands sync instantly to that server instead of globally. | unset |
 | `HOBBY_BOT_DATA_DIR` | Where `activities.json` and `feed_state.json` live. Seeded from the bundled catalog on first start. | source dir |
 | `HOBBY_BOT_HEARTBEAT` | File touched once a minute while healthy. `healthcheck.py` reads it for the liveness probe. | unset |
+| `HOBBY_BOT_WEBHOOK_FILE` | Path to a file holding a Discord webhook URL (mounted Secret). Wins over `HOBBY_BOT_WEBHOOK_URL`. | unset |
+| `HOBBY_BOT_WEBHOOK_URL` | Webhook URL for local runs. | unset |
 | `TZ` | Zone for the weekly feed hour. | system |
 
-A token equal to `REPLACE_ME` (or empty) makes the bot log a warning and wait, re-reading the file every minute. It never crash loops on a placeholder.
+## Modes
+
+- **Gateway mode** (a usable token): slash commands plus the weekly feed. The feed posts to the channel chosen with `/feed on`, or through the webhook when no channel was chosen.
+- **Webhook-only mode** (no token, but a webhook URL): the weekly feed posts through the webhook, attributed to "Hobby Bot". No slash commands. With no state file yet, the feed starts enabled on the defaults (Monday 09:00, 3 picks). The process checks for a token every minute and exits when one appears so the container restarts into gateway mode.
+- `python bot.py --post-now` posts one batch through the webhook and exits. Handy for a smoke test or a one-off Job.
+
+A token equal to `REPLACE_ME` (or empty) with no webhook makes the bot log a warning and wait, re-reading the file every minute. It never crash loops on a placeholder.
 
 ## Discord setup
 

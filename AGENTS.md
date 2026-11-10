@@ -38,6 +38,9 @@ CI fails if `requirements.lock` drifts from `uv.lock`. Re-export after any depen
 - The liveness probe reads the heartbeat file's mtime. The heartbeat is touched only while
   the gateway latency is finite, so a wedged websocket restarts the pod. It is also touched
   while waiting for a token, because a restart would not help there.
+- Webhook-only mode (`webhook_only_loop`) runs when there is a webhook URL but no token. It
+  is the production state until the Discord application exists. `feed_state.initial` turns
+  the feed on by default in that case and writes the file, so `/feed off` later still sticks.
 - `/feed on` resets `last_posted` so the first scheduled post is not skipped. It keeps
   `recent` so switching the schedule does not cause repeats.
 - Categories are a fixed tuple in `suggest.py`. Adding one needs a restart so the slash

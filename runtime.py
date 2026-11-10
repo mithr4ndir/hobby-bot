@@ -74,6 +74,35 @@ def read_token(env: dict[str, str] | None = None) -> str | None:
     return value if looks_like_token(value) else None
 
 
+_WEBHOOK_PREFIXES: Final[tuple[str, ...]] = (
+    "https://discord.com/api/webhooks/",
+    "https://discordapp.com/api/webhooks/",
+    "https://canary.discord.com/api/webhooks/",
+)
+
+
+def looks_like_webhook_url(value: str) -> bool:
+    if not value or len(value) > 300 or any(c.isspace() for c in value):
+        return False
+    return value.startswith(_WEBHOOK_PREFIXES)
+
+
+def read_webhook_url(env: dict[str, str] | None = None) -> str | None:
+    """HOBBY_BOT_WEBHOOK_FILE (a mounted Secret) wins over HOBBY_BOT_WEBHOOK_URL.
+    Returns None when neither yields a Discord webhook URL."""
+    env = os.environ if env is None else env
+    path = env.get("HOBBY_BOT_WEBHOOK_FILE", "").strip()
+    if path:
+        try:
+            value = Path(path).read_text(encoding="utf-8").strip()
+        except OSError as exc:
+            LOG.warning("webhook file unreadable: %s", exc.__class__.__name__)
+            return None
+        return value if looks_like_webhook_url(value) else None
+    value = env.get("HOBBY_BOT_WEBHOOK_URL", "").strip()
+    return value if looks_like_webhook_url(value) else None
+
+
 def wait_for_token(
     sleep: Callable[[float], None] = time.sleep,
     on_wait: Callable[[], None] | None = None,

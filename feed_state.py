@@ -105,16 +105,32 @@ def save(state: FeedState, path: Path = STATE_FILE) -> None:
         raise
 
 
-def is_due(state: FeedState, now: datetime) -> bool:
-    """True when the feed is on, it is the configured weekday and hour, and we
-    have not already posted today."""
-    if not state.enabled or state.channel_id is None:
+def is_due(state: FeedState, now: datetime, has_webhook: bool = False) -> bool:
+    """True when the feed is on, there is somewhere to post (a channel chosen
+    with /feed on, or a configured webhook), it is the configured weekday and
+    hour, and we have not already posted today."""
+    if not state.enabled:
+        return False
+    if state.channel_id is None and not has_webhook:
         return False
     if WEEKDAYS[now.weekday()] != state.weekday:
         return False
     if now.hour != state.hour:
         return False
     return state.last_posted != now.date().isoformat()
+
+
+def initial(has_webhook: bool, path: Path = STATE_FILE) -> FeedState:
+    """State at startup. With no state file yet and a webhook configured, the
+    feed starts enabled on the defaults (Monday 09:00, 3 picks) so a fresh
+    deployment posts without anyone running /feed on. /feed off still sticks,
+    because it writes the file."""
+    if path.exists():
+        return load(path)
+    state = FeedState(enabled=has_webhook)
+    if has_webhook:
+        save(state, path)
+    return state
 
 
 def mark_posted(state: FeedState, now: datetime) -> FeedState:
