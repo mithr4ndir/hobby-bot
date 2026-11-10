@@ -47,8 +47,8 @@ jobs:
       # than the one the tests ran against.
       - name: Lockfile export is current
         run: |
-          uv export --frozen --no-dev --format requirements.txt -o /tmp/requirements.lock
-          diff -u requirements.lock /tmp/requirements.lock
+          uv export --frozen --no-dev --format requirements.txt -o requirements.lock
+          git diff --exit-code -- requirements.lock
 
   build:
     needs: test
