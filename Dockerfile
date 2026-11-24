@@ -7,7 +7,7 @@
 
 # Stage 1: build a venv from requirements.lock. Every wheel is verified against
 # its sha256 (uv export --hash), so a tampered index cannot slip a package in.
-FROM python:3.12.14-slim-bookworm@sha256:782412e85d0f0984994c290652577d4018aff08145c85b262bb63dc0c7522254 AS deps
+FROM python:3.15.1-slim-bookworm@sha256:575f8bc12ec26542e0678bc6b60e385218248019d433157ec327264a78c3a853 AS deps
 WORKDIR /build
 COPY requirements.lock ./
 RUN python -m venv /opt/venv \
@@ -15,7 +15,7 @@ RUN python -m venv /opt/venv \
  && /opt/venv/bin/pip uninstall -y pip setuptools 2>/dev/null || true
 
 # Stage 2: runtime.
-FROM python:3.12.14-slim-bookworm@sha256:782412e85d0f0984994c290652577d4018aff08145c85b262bb63dc0c7522254
+FROM python:3.15.1-slim-bookworm@sha256:575f8bc12ec26542e0678bc6b60e385218248019d433157ec327264a78c3a853
 
 # ca-certificates for TLS to Discord, tzdata so TZ=America/Los_Angeles resolves.
 # Pending Debian security updates are applied at build time, and pip is removed:
